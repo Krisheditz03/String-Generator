@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random String</title>
+</head>
+<body style="background: linear-gradient(to left, #20002c,#cbb4d4); height: 100vh;">
+    <h1 style="text-align: center;">Random String Generator</h1>
+
+        
+            <div style="text-align: center;">
+                <label for="rst">Enter a number :</label>
+                <input style="border: 2px solid red; border-radius: 5px;" type="number" id="rst"><br><br>
+    
+                <button style="border: 2px solid red; border-radius: 5px; background-color: yellow;" onclick="randomString()">Generate</button>
+    
+                <p id="ans"></p>
+            </div>
+        
+
+        <script>
+            function randomString() {
+                var length = document.getElementById("rst").value; 
+                var characters = 'abcdefghijklmnopqrstuvwxyz'; 
+                var result = ' '; 
+                var charactersLength = characters.length; 
+                for(var i = 0; i < length; i++) { 
+                result +=  
+                characters.charAt(Math.floor(Math.random() * charactersLength)); 
+            } 
+                document.getElementById("ans").innerHTML = result;
+            }
+        </script>
+</body>
+</html>
